@@ -1,0 +1,63 @@
+/*
+ Name: Natalia Carbajal
+ Date: 8/30/2026
+ Assignment: Module 4.2 Assignment
+*/
+
+/* Sets the width of the main container */
+#container {
+    width: 100%;
+}
+
+/* Centers the main heading and changes its color */
+h1 {
+    text-align: center;
+    color: rgba(185, 63, 8, 1);
+}
+
+/* Creates a three-column grid for the book images */
+#image-gallery {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    margin-top: 10%;
+}
+
+/* Adds a border and padding around each book */
+.gallery-item {
+    border: 1px solid rgb(254, 116, 3);
+    padding: 10px;
+}
+
+/* Centers the book titles and matches the heading color */
+h3 {
+    text-align: center;
+    color: rgba(185, 63, 8, 1);
+}
+
+/* Centers each book image inside its gallery item */
+figure {
+    text-align: center;
+}
+
+/* Makes the author information italic and smaller */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(185, 63, 8, 1);
+}
+
+/* Sets the size of the book cover images */
+img {
+    width: 150px;
+    height: 200px;
+}
+
+/* Positions the link toward the bottom-right of the page */
+#bottom-link {
+    width: 100%;
+    margin-top: 60%;
+    float: right;
+    margin-bottom: 20px;
+    text-align: right;
+}
