@@ -1,0 +1,148 @@
+/*
+    Name: Natalia Carbajal
+    Date: 9/20/2026
+    Assignment: Module 8.2
+*/
+
+/* ---------- GENERAL PAGE ---------- */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    background-color: #C43F06;
+    padding: 25px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* ---------- NAVIGATION ---------- */
+
+#navbar {
+    background-color: #C43F06;
+    padding: 15px 8px;
+    border-bottom: 10px solid #A7A66B;
+}
+
+#navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- CONTAINER ---------- */
+
+#container {
+    width: 90%;
+    margin: 30px auto;
+}
+
+/* ---------- CARDS ---------- */
+
+.card {
+    width: 480px;
+    background-color: white;
+    margin-bottom: 35px;
+    padding: 0 15px 25px 15px;
+    box-shadow: 0 2px 5px #CCCCCC;
+}
+
+/* ---------- CARD TITLE ---------- */
+
+.card-title {
+    color: #C43F06;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+/* ---------- CARD CONTENT ---------- */
+
+.card-content {
+    padding: 5px 0;
+}
+
+/* ---------- MOVIE TABLE ---------- */
+
+#movies {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#movies th {
+    background-color: #C43F06;
+    color: white;
+    text-align: left;
+    padding: 10px;
+}
+
+#movies td {
+    border: 1px solid #D5D5D5;
+    padding: 15px 8px;
+}
+
+#movies ul {
+    margin: 0;
+    padding-left: 25px;
+}
+
+/* ---------- FOOD LIST ---------- */
+
+.card-content ol {
+    margin-top: 10px;
+}
+
+.card-content li {
+    margin-bottom: 8px;
+}
+
+.card-content a {
+    color: #0066CC;
+}
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #C43F06;
+    color: white;
+    padding: 10px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer p:first-child {
+    float: left;
+    padding-left: 5px;
+}
+
+footer p:last-child {
+    text-align: right;
+    padding-right: 15px;
+}
+
+footer a {
+    color: white;
+    font-style: italic;
+}
