@@ -1,0 +1,89 @@
+<!--
+    Name: Natalia Carbajal
+    Date: 9/27/2026
+    Assignment: Module 9.3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="Assignment 9.3 - JavaScript Part 1">
+    <meta name="keywords" content="html, css, javascript, web development, bellevue university">
+    <meta name="robots" content="nofollow">
+    <meta name="author" content="Natalia Carbajal">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <link href="carbajal_Mod9_3.css" type="text/css" rel="stylesheet">
+
+    <script>
+        var firstVariableValue = "technology";
+        var secondVariableValue = "creative";
+        var thirdVariableValue = "traveling";
+        var fourthVariableValue = "career";
+    </script>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+        <h2>Chapter 1: About Me</h2>
+
+        <p class="intro">My name is Natalia, and I am currently working toward my degree in Software Engineering.
+            I have an Associate degree in Computer Information Systems, and I decided to continue my education because
+            I have always been interested in <span id="technology">________</span> and learning how things work.
+        </p>
+
+        <p>
+            <button type="button"
+                onclick="document.getElementById('technology').innerHTML = firstVariableValue">technology</button>
+        </p>
+
+        <p>I grew up in California and currently live in the Inland Empire. Growing up, I enjoyed spending time with my family
+            and trying different activities and hobbies. I would describe myself as someone who likes to stay busy and enjoys
+            learning new things, especially when I can be <span id="creative">________</span> or work with something hands-on.
+        </p>
+
+        <p>
+            <button type="button"
+                onclick="document.getElementById('creative').innerHTML = secondVariableValue">creative</button>
+        </p>
+
+        <p>Outside of school and work, I have several hobbies that I enjoy. I like cooking and baking, especially when I get to try
+            making something from scratch, and I also enjoy <span id="traveling">________</span> and exploring new places. I am also interested in music,
+            and I have been planning trips to places with a strong music history because my boyfriend really enjoys guitars and music.
+        </p>
+
+        <p>
+            <button type="button"
+                onclick="document.getElementById('traveling').innerHTML = thirdVariableValue">traveling</button>
+        </p>
+
+        <p>One of my goals is to continue growing both personally and professionally while I finish my degree. I would eventually
+            like to have a <span id="career">________</span> in technology where I can use the skills I am learning and hopefully have more
+            flexibility in my work. I am looking forward to this class because I want to become more comfortable with web development
+            and learn skills that I can use in future classes and in my career.
+        </p>
+
+        <p>
+            <button type="button"
+                onclick="document.getElementById('career').innerHTML = fourthVariableValue">career</button>
+        </p>
+
+        <hr />
+
+        <address>
+            <p><a href="https://www.bellevue.edu">Bellevue University</a></p>
+            <p>1000 Galvin Road South</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+
+    </div>
+
+</body>
+
+</html>
