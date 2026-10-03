@@ -1,0 +1,88 @@
+
+<!--
+    Name: Natalia Carbajal
+    Date: 10/2/2026
+    Assignment: Module 10.3 - JavaScript Part 2
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin: 15px;
+            cursor: pointer;
+        }
+
+        #mainImage {
+            width: 300px;
+            height: 300px;
+            display: none;
+        }
+
+        #message {
+            font-size: 18px;
+        }
+    </style>
+
+    <script>
+        function showChoice(choice) {
+            var mainImage = document.getElementById("mainImage");
+            var message = document.getElementById("message");
+
+            mainImage.style.display = "inline";
+
+            if (choice === "one") {
+                mainImage.src = "images/hotdog.jpg";
+                mainImage.alt = "A hot dog";
+                message.textContent = "One hot dog! The original.";
+            } else {
+                mainImage.src = "images/dog.jpg";
+                mainImage.alt = "A dog wearing a hot dog costume";
+                message.textContent = "Two hot dogs? That's one HOT dog!";
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+    <h2>How Many Hot Dogs?</h2>
+    <p>Click one of the pictures to make your choice!</p>
+
+    <img src="images/one.jpg"
+         alt="One finger"
+         onclick="showChoice('one')">
+
+    <img src="images/two.jpg"
+         alt="Two fingers"
+         onclick="showChoice('two')">
+
+    <h2>Your Choice</h2>
+
+    <img id="mainImage"
+         src=""
+         alt="Your selected image">
+
+    <p id="message">Choose one or two!</p>
+
+</body>
+</html>
