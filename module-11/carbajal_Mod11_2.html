@@ -1,0 +1,136 @@
+<!--
+    Name: Natalia Carbajal
+    Date: 10/11/2026
+    Assignment: JavaScript Exercise, Part 3
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSD 340 Web Development with HTML and CSS</title>
+
+    <link rel="stylesheet" href="Carbajal_Mod11_2.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+
+        <p>
+            Enter a task below and click Add to add task to list.
+            Click Delete Last Entry to remove last entered item.
+            Click Delete Selected Item to delete item selected in drop down.
+            Click Sort to sort items in the list.
+        </p>
+
+        <input type="text" id="todoInput" placeholder="Enter a task...">
+
+        <select id="taskSelect">
+            <option value="">-- Select item to delete --</option>
+        </select>
+
+        <div class="buttons">
+            <button onclick="addTask()">Add</button>
+            <button onclick="deleteLast()">Delete Last Entry</button>
+            <button onclick="deleteSelected()">Delete Selected Item</button>
+            <button onclick="sortTasks()">Sort</button>
+        </div>
+
+        <div id="display"></div>
+    </div>
+
+    <script>
+        // Array to store tasks
+        let todoList = [];
+
+        // Adds a task
+        function addTask() {
+            let input = document.getElementById("todoInput");
+            let task = input.value.trim();
+
+            if (task === "") {
+                alert("Please enter a task.");
+                return;
+            }
+
+            todoList.push(task);
+
+            alert("Item: " + task + " Added as Item " + todoList.length);
+
+            input.value = "";
+            displayList();
+        }
+
+        // Deletes the last task
+        function deleteLast() {
+            if (todoList.length === 0) {
+                alert("The To Do List is empty.");
+                return;
+            }
+
+            let task = todoList.pop();
+
+            alert("Item: " + task + " Deleted.");
+
+            displayList();
+        }
+
+        // Deletes a selected task
+        function deleteSelected() {
+            let select = document.getElementById("taskSelect");
+            let index = select.value;
+
+            if (index === "") {
+                alert("Please select an item to delete.");
+                return;
+            }
+
+            let task = todoList.splice(Number(index), 1)[0];
+
+            alert("Item: " + task + " Deleted.");
+
+            displayList();
+        }
+
+        // Sorts the list
+        function sortTasks() {
+            todoList.sort();
+
+            alert("The To Do List has been sorted.");
+
+            displayList();
+        }
+
+        // Displays the list and updates the dropdown
+        function displayList() {
+            let output = "";
+            let select = document.getElementById("taskSelect");
+
+            select.innerHTML =
+                '<option value="">-- Select item to delete --</option>';
+
+            if (todoList.length === 0) {
+                output = "<p>No tasks have been added.</p>";
+            } else {
+                output = "<h2>Things To Do</h2>";
+
+                for (let i = 0; i < todoList.length; i++) {
+                    output += (i + 1) + ". " + todoList[i] + "<br>";
+
+                    let option = document.createElement("option");
+                    option.value = i;
+                    option.textContent = todoList[i];
+                    select.appendChild(option);
+                }
+            }
+
+            document.getElementById("display").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
